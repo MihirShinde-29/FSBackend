@@ -5,6 +5,7 @@ const path = require("path");
 exports.createItem = (req, res) => {
   const dir =
     path.resolve(__dirname, "..", "uploads") + "/" + req.file.filename;
+  console.log(dir);
   const newItem = new Item({
     name: req.body.name,
     price: req.body.price,
